@@ -1,0 +1,23 @@
+{
+  "name": "trabalho-p1-api-rest-ads28",
+  "version": "1.0.0",
+  "description": "API RESTful para Gerenciamento de Tarefas - Trabalho P1 ADS28",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihlucee/trabalho-p1-api-rest-ads28.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihlucee/trabalho-p1-api-rest-ads28/issues"
+  },
+  "homepage": "https://github.com/mihlucee/trabalho-p1-api-rest-ads28#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
