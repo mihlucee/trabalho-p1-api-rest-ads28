@@ -1,0 +1,499 @@
+{
+    "info": {
+        "_postman_id": "a_unique_id_for_this_collection",
+        "name": "Task Management API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Tarefas",
+            "item": [
+                {
+                    "name": "Listar Todas as Tarefas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/tarefas",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["tarefas"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obter Tarefa por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/tarefas/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["tarefas", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar Nova Tarefa",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"titulo\": \"Estudar para a prova de P1\",\n    \"descricao\": \"Revisar todo o conteúdo de Node.js e Express.\",\n    \"status\": \"pendente\",\n    \"usuarioId\": 1,\n    \"projetoId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/tarefas",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["tarefas"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar Tarefa",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"titulo\": \"Estudar para a prova de P1 (Atualizado)\",\n    \"descricao\": \"Revisar todo o conteúdo de Node.js e Express e fazer exercícios.\",\n    \"status\": \"em andamento\",\n    \"usuarioId\": 1,\n    \"projetoId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/tarefas/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["tarefas", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar Tarefa",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/tarefas/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["tarefas", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Usuários",
+            "item": [
+                {
+                    "name": "Listar Todos os Usuários",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/usuarios",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["usuarios"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obter Usuário por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/usuarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["usuarios", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar Novo Usuário",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"João Silva\",\n    \"email\": \"joao.silva@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/usuarios",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["usuarios"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar Usuário",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"João Silva Atualizado\",\n    \"email\": \"joao.silva.atualizado@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/usuarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["usuarios", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar Usuário",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/usuarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["usuarios", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Projetos",
+            "item": [
+                {
+                    "name": "Listar Todos os Projetos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/projetos",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["projetos"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obter Projeto por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/projetos/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["projetos", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar Novo Projeto",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"Projeto Alpha\",\n    \"descricao\": \"Primeiro projeto de desenvolvimento.\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/projetos",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["projetos"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar Projeto",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"Projeto Alpha (Atualizado)\",\n    \"descricao\": \"Primeiro projeto de desenvolvimento, agora com novas funcionalidades.\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/projetos/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["projetos", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar Projeto",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/projetos/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["projetos", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Categorias",
+            "item": [
+                {
+                    "name": "Listar Todas as Categorias",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/categorias",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["categorias"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obter Categoria por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/categorias/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["categorias", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar Nova Categoria",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"Estudos\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/categorias",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["categorias"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar Categoria",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"Trabalho\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/categorias/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["categorias", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar Categoria",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/categorias/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["categorias", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Comentários",
+            "item": [
+                {
+                    "name": "Listar Todos os Comentários",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/comentarios",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["comentarios"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obter Comentário por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/comentarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["comentarios", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Criar Novo Comentário",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"texto\": \"Este é um comentário sobre a tarefa.\",\n    \"usuarioId\": 1,\n    \"tarefaId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/comentarios",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["comentarios"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Atualizar Comentário",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"texto\": \"Este é um comentário atualizado sobre a tarefa.\",\n    \"usuarioId\": 1,\n    \"tarefaId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/comentarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["comentarios", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Deletar Comentário",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/comentarios/1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "3000",
+                            "path": ["comentarios", "1"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
